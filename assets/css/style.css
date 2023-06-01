@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --main-color: rgb(7, 128, 172);
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    accent-color: var(--main-color);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 8% 85% 7%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.home{
+    text-align: center;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-color);
+    color: white;
+    grid-column: span 7;
+    padding: 5px;
+}
+
+aside{
+    box-shadow: 0 0 10px gray;
+    padding: 10px;
+    background: linear-gradient(45deg, lightblue, #fff);
+}
+
+aside ul{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+aside ul li{
+    list-style: none;
+}
+
+aside ul li a{
+    text-decoration: unset;
+    color: var(--main-color);
+    font-weight: 500;
+    transition: 0.1s;
+}
+
+aside ul li a:hover{
+    font-weight: 800;
+}
+
+main{
+    padding: 20px;
+    grid-column: span 6;
+    overflow-y: auto;
+}
+
+main h1{
+    margin: 0;
+}
+
+main h1::selection{
+    background: var(--main-color);
+    color: white;
+}
+
+
+main>.categories{
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+}
+main>.categories li{
+    list-style: none;
+    border-right: 1px solid var(--main-color);
+    padding-right: 15px;
+}
+main>.categories li:last-child{
+    border: unset;
+}
+
+main>.categories li a{
+    text-decoration: unset;
+    color: var(--main-color);
+}
+
+main>.categories li a.active{
+    font-weight: 800;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-color);
+    color: white;
+    grid-column: span 7;
+    padding: 5px;
+}
+
+span.alert {
+    border: 1px solid lightblue;
+    padding: 9px;
+    box-shadow: 2px 2px 0 gray;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--main-color);
+    color: white;
+}
+
+form{
+
+}
+
+form label{
+    margin-bottom: 9px;
+}
+
+form label span,
+form label{
+    display: block;
+    color: var(--main-color);
+    font-size: 0.8rem;
+}
+
+form input{
+    padding: 5px;
+    border-radius: 0;
+    border: 1px solid var(--main-color);
+}
+
+button{
+    background: var(--main-color);
+    color: white;
+    padding: 10px 30px;
+    border: unset;
+    border-radius: 3px;
+    margin-top: 10px;
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover{
+    color: var(--main-color);
+    background: white;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:invalid{
+    /* border-color: red; */
+}
+
+input:focus-visible{
+    outline: unset;
+}
+
+input::placeholder{
+    color: var(--main-color);
+    opacity: 0.5;   
+}
+
+
+.opacity{
+    opacity: 0.5;   
+}
